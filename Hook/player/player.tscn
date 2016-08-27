@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=5 format=1]
 
 [ext_resource path="res://player/player.gd" type="Script" id=1]
-[ext_resource path="res://player/player.png" type="Texture" id=2]
+[ext_resource path="res://hookshot/hookshot.tscn" type="PackedScene" id=2]
+[ext_resource path="res://player/player.png" type="Texture" id=3]
 
 [sub_resource type="CapsuleShape2D" id=2]
 
@@ -40,9 +41,14 @@ drag_margin/top = 0.1
 drag_margin/right = 0.1
 drag_margin/bottom = 0.1
 
+[node name="hookshot" parent="." instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 21, 5 )
+transform/scale = Vector2( 0.5, 0.5 )
+
 [node name="Sprite" type="Sprite" parent="."]
 
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="CollisionShape2D 2" type="CollisionShape2D" parent="."]
 
