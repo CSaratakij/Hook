@@ -1,2 +1,2 @@
 # Hook
-Infinite run with a hookshot : Ludumdare #36 (Jam)
+platformer with a hookshot : Ludumdare #36 (Jam)

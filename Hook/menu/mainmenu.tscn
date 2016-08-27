@@ -107,6 +107,7 @@ flat = false
 
 [node name="GameInfo" type="VBoxContainer" parent="."]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
@@ -146,6 +147,32 @@ text = "Version : Ludumdare # 36 (Jam)"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+
+[node name="SubMenu" type="HBoxContainer" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 971.0
+margin/top = 535.0
+margin/right = 1011.0
+margin/bottom = 575.0
+alignment = 0
+
+[node name="btnOption" type="TextureButton" parent="SubMenu"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 0.0
+margin/bottom = 40.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
 
 [connection signal="pressed" from="Buttons/btnPlay" to="." method="_on_btnPlay_pressed"]
 
