@@ -4,17 +4,17 @@
 [ext_resource path="res://hookshot/hookshot.tscn" type="PackedScene" id=2]
 [ext_resource path="res://player/player.png" type="Texture" id=3]
 
-[sub_resource type="CapsuleShape2D" id=2]
+[sub_resource type="CapsuleShape2D" id=1]
 
 custom_solver_bias = 0.0
 radius = 18.0
 height = 30.0
 
-[node name="player" type="KinematicBody2D"]
+[node name="player" type="KinematicBody2D" groups=[ "player" ]]
 
 transform/pos = Vector2( 32, 32 )
 input/pickable = false
-shapes/0/shape = SubResource( 2 )
+shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 4, -2 )
 shapes/0/trigger = false
 collision/layers = 2
@@ -53,7 +53,7 @@ texture = ExtResource( 3 )
 [node name="CollisionShape2D 2" type="CollisionShape2D" parent="."]
 
 transform/pos = Vector2( 4, -2 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
 
