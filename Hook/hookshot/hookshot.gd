@@ -14,8 +14,7 @@ onready var ropes = get_node("ropes").get_children()
 onready var  arrow = get_node("arrow")
 
 func _ready():
-	for rope in ropes:
-		rope.hide()
+	_hide_ropes()
 	set_process_input(true)
 	set_fixed_process(true)
 
