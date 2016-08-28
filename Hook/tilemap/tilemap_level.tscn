@@ -12,13 +12,11 @@ extents = Vector2( 31.9703, 31.9911 )
 
 [node name="Block" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 32, 32 )
 texture = ExtResource( 1 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Block"]
 
-editor/display_folded = true
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )

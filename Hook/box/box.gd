@@ -1,21 +1,20 @@
 
 extends KinematicBody2D
 
-const GRAVITY = 300.0
-const PUSH_SPEED = 80.0
+const GRAVITY = 600.0
+const PUSH_FORCE = 80.0
 
 var velocity = Vector2()
 var motion = Vector2()
 var move_dir = Vector2()
-
 
 func _ready():
 	set_fixed_process(true)
 
 func _fixed_process(delta):
 	velocity.y += GRAVITY * delta
-	velocity.x = move_dir.x * PUSH_SPEED
-
+	velocity.x = move_dir.x * PUSH_FORCE
+	
 	motion = velocity * delta
 	move(motion)
 	
