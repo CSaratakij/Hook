@@ -8,6 +8,7 @@ const JUMP_FORCE = 380.0
 var is_facing_right = true
 var is_grounded = false
 var is_climbing = false
+var is_using_hook = false
 
 var motion = Vector2()
 var velocity = Vector2()
@@ -17,17 +18,24 @@ onready var _raycast = get_node("RayCast2D")
 
 func _ready():
 	set_process(true)
+	set_process_input(true)
 	set_fixed_process(true)
+
+func _input(event):
+	if event.is_action_pressed("hook"):
+		is_using_hook = true
+	elif event.is_action_released("hook"):
+		is_using_hook = false
 
 func _process(delta):
 	if Input.is_action_pressed("move_left"):
 		move_dir.x = -1.0
-		if is_facing_right:
+		if not is_using_hook and is_facing_right:
 			is_facing_right = !is_facing_right
 			set_scale(Vector2(-1.0, 1.0))
 	elif Input.is_action_pressed("move_right"):
 		move_dir.x = 1.0
-		if not is_facing_right:
+		if not is_using_hook and not is_facing_right:
 			is_facing_right = !is_facing_right
 			set_scale(Vector2(1.0, 1.0))
 	else:

@@ -9,7 +9,7 @@
 
 custom_solver_bias = 0.0
 a = Vector2( -1.37044, -0.14921 )
-b = Vector2( 0.0021019, 762.153 )
+b = Vector2( -1.28146, 134.449 )
 
 [node name="hookshot" type="Sprite"]
 
@@ -17,9 +17,13 @@ transform/rot = -45.0
 texture = ExtResource( 1 )
 script/script = ExtResource( 2 )
 
+[node name="max_rope_point" type="Node2D" parent="."]
+
+transform/pos = Vector2( 87.5288, -88.0319 )
+transform/scale = Vector2( 1, 1 )
+
 [node name="ropes" type="Node2D" parent="."]
 
-editor/display_folded = true
 __meta__ = { "_edit_group_":true }
 
 [node name="rope" type="Sprite" parent="ropes"]
@@ -31,56 +35,7 @@ texture = ExtResource( 3 )
 
 [node name="rope1" type="Sprite" parent="ropes"]
 
-transform/pos = Vector2( 104.012, -104.099 )
-transform/rot = 0.0891474
-transform/scale = Vector2( 1, 1 )
-texture = ExtResource( 3 )
-
-[node name="rope2" type="Sprite" parent="ropes"]
-
-transform/pos = Vector2( 161.952, -162.039 )
-transform/rot = 0.0891474
-transform/scale = Vector2( 1, 1 )
-texture = ExtResource( 3 )
-
-[node name="rope3" type="Sprite" parent="ropes"]
-
-transform/pos = Vector2( 219.97, -220.057 )
-transform/rot = 0.0891474
-transform/scale = Vector2( 1, 1 )
-texture = ExtResource( 3 )
-
-[node name="rope4" type="Sprite" parent="ropes"]
-
-transform/pos = Vector2( 277.967, -278.053 )
-transform/rot = 0.0891474
-transform/scale = Vector2( 1, 1 )
-texture = ExtResource( 3 )
-
-[node name="rope5" type="Sprite" parent="ropes"]
-
-transform/pos = Vector2( 335.948, -336.035 )
-transform/rot = 0.0891474
-transform/scale = Vector2( 1, 1 )
-texture = ExtResource( 3 )
-
-[node name="rope6" type="Sprite" parent="ropes"]
-
-transform/pos = Vector2( 393.931, -394.018 )
-transform/rot = 0.0891474
-transform/scale = Vector2( 1, 1 )
-texture = ExtResource( 3 )
-
-[node name="rope7" type="Sprite" parent="ropes"]
-
-transform/pos = Vector2( 451.948, -452.035 )
-transform/rot = 0.0891474
-transform/scale = Vector2( 1, 1 )
-texture = ExtResource( 3 )
-
-[node name="rope8" type="Sprite" parent="ropes"]
-
-transform/pos = Vector2( 510.381, -510.468 )
+transform/pos = Vector2( 66.0206, -66.1075 )
 transform/rot = 0.0891474
 transform/scale = Vector2( 1, 1 )
 texture = ExtResource( 3 )
