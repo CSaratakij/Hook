@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=1]
+[gd_scene load_steps=6 format=1]
 
 [ext_resource path="res://menu/mainmenu.gd" type="Script" id=1]
 [ext_resource path="res://font/font_120px.fnt" type="BitmapFont" id=2]
 [ext_resource path="res://font/font_16px.fnt" type="BitmapFont" id=3]
 [ext_resource path="res://font/font_50px.fnt" type="BitmapFont" id=4]
+[ext_resource path="res://font/font_20px.fnt" type="BitmapFont" id=5]
 
 [node name="mainmenu" type="Panel"]
 
@@ -148,6 +149,37 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
+[node name="HowTo" type="HBoxContainer" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 880.0
+margin/top = 550.0
+margin/right = 1015.0
+margin/bottom = 590.0
+alignment = 0
+
+[node name="btnHowTo" type="Button" parent="HowTo"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 135.0
+margin/bottom = 40.0
+custom_fonts/font = ExtResource( 5 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "How to play"
+flat = true
+
 [connection signal="pressed" from="Buttons/btnPlay" to="." method="_on_btnPlay_pressed"]
+
+[connection signal="pressed" from="HowTo/btnHowTo" to="." method="_on_btnHowTo_pressed"]
 
 

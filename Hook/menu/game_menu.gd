@@ -1,9 +1,9 @@
 
 extends Panel
 
-const MAINMENU_PATH = "res://menu/mainmenu.tscn"
-
 onready var tree = get_tree()
+onready var root = tree.get_root()
+onready var global = root.get_node("/root/scripts/global")
 onready var player_cameras = tree.get_nodes_in_group("player_camera")
 
 func _ready():
@@ -32,7 +32,7 @@ func _on_btnRestart_pressed():
 
 func _on_btnBackToMainMenu_pressed():
 	tree.set_pause(false)
-	tree.change_scene(MAINMENU_PATH)
+	global.change_to_mainmenu()
 
 func _on_btnQuit_pressed():
 	tree.quit()

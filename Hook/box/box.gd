@@ -1,7 +1,7 @@
 
 extends KinematicBody2D
 
-const GRAVITY = 600.0
+const GRAVITY = 200.0
 const PUSH_FORCE = 10.0
 
 var velocity = Vector2()

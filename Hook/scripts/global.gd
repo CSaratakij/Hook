@@ -1,7 +1,9 @@
 
 extends Node2D
 
-const THANK_YOU_FOR_PLAYING = ""
+const HOW_TO_PLAY = "res://menu/control_menu.tscn"
+const MAINMENU = "res://menu/mainmenu.tscn"
+const THANK_YOU_FOR_PLAYING = "res://menu/gameover.tscn"
 const LEVELS = [
 	"res://level/level.tscn"
 	]
@@ -18,6 +20,12 @@ func game_over():
 
 func is_game_over():
 	return is_over
+
+func change_to_how_to_play():
+	tree.change_scene(HOW_TO_PLAY)
+
+func change_to_mainmenu():
+	tree.change_scene(MAINMENU)
 
 func change_level(level_id):
 	tree.change_scene(LEVELS[level_id])

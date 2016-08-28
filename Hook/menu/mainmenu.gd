@@ -17,3 +17,6 @@ func _on_btnPlay_pressed():
 	
 func _next_scene():
 	global.change_level(0)
+
+func _on_btnHowTo_pressed():
+	global.change_to_how_to_play()

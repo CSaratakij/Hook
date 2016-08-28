@@ -1,11 +1,14 @@
-[gd_scene load_steps=5 format=1]
+[gd_scene load_steps=6 format=1]
 
 [ext_resource path="res://tilemap/tileset_level.tres" type="TileSet" id=1]
-[ext_resource path="res://player/player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://box/box.tscn" type="PackedScene" id=3]
-[ext_resource path="res://menu/game_menu.tscn" type="PackedScene" id=4]
+[ext_resource path="res://font/font_16px.fnt" type="BitmapFont" id=2]
+[ext_resource path="res://player/player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://box/box.tscn" type="PackedScene" id=4]
+[ext_resource path="res://menu/game_menu.tscn" type="PackedScene" id=5]
 
 [node name="level" type="Node2D"]
+
+__meta__ = { "_edit_lock_":true }
 
 [node name="TileMap" type="TileMap" parent="."]
 
@@ -14,7 +17,7 @@ tile_set = ExtResource( 1 )
 cell/size = Vector2( 64, 64 )
 cell/quadrant_size = 16
 cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-cell/half_offset = 0
+cell/half_offset = 2
 cell/tile_origin = 0
 cell/y_sort = false
 collision/use_kinematic = false
@@ -23,26 +26,84 @@ collision/bounce = 0.0
 collision/layers = 1
 collision/mask = 1
 occluder/light_mask = 1
-tile_data = IntArray( -6, 1, -5, 1, -4, 1, -3, 1, -2, 1, -1, 1, -65536, 1, -65535, 0, -65534, 0, -65533, 0, 65532, 1, 65533, 1, 65534, 1, 65535, 1, 0, 1, 1, 0, 2, 0, 3, 0, 131064, 1, 131065, 1, 131066, 1, 131067, 1, 131068, 1, 131069, 1, 131070, 1, 131071, 0, 65536, 0, 65537, 0, 65538, 0, 65539, 0, 196597, 0, 196601, 1, 196603, 1, 196604, 1, 196605, 1, 196606, 1, 196607, 0, 131072, 0, 131073, 0, 131074, 0, 131075, 0, 262129, 0, 262130, 0, 262131, 0, 262132, 0, 262133, 0, 262134, 0, 262135, 0, 262136, 0, 262137, 0, 262138, 0, 262139, 0, 262140, 0, 262141, 0, 262142, 0, 262143, 0, 196608, 0, 196609, 0, 196610, 0, 196611, 0, 327666, 0, 327667, 0, 327668, 0, 327669, 0, 327670, 0, 327671, 0, 327672, 0, 327673, 0, 327674, 0, 327675, 0, 327676, 0, 327677, 0, 327678, 0, 327679, 0, 262144, 0, 262145, 0, 262146, 0, 262147, 0, 262148, 0, 393201, 0, 393202, 0, 393203, 0, 393204, 0, 393205, 0, 393206, 0, 393207, 0, 393208, 0, 393209, 0, 393210, 0, 393211, 0, 393212, 0, 393213, 0, 393214, 0, 393215, 0, 327680, 0, 327681, 0, 327682, 0, 327683, 0, 458743, 0, 458744, 0, 458745, 0, 458746, 0, 458747, 0, 458748, 0, 458749, 0, 458750, 0, 458751, 0, 393216, 0, 393217, 0, 393218, 0, 393219, 0, 393220, 0, 393221, 0 )
+tile_data = IntArray( -458755, 0, -458754, 0, -458753, 0, -524288, 0, -524287, 0, -524286, 0, -393223, 0, -393222, 0, -393221, 0, -393220, 0, -393219, 0, -393218, 0, -393217, 0, -458752, 0, -458751, 0, -458750, 0, -458749, 0, -458748, 0, -327688, 0, -327687, 0, -327686, 0, -327685, 0, -327684, 0, -327683, 0, -327682, 0, -327681, 0, -393216, 0, -393215, 0, -393214, 0, -393213, 0, -393212, 0, -393211, 0, -262153, 0, -262152, 0, -262151, 0, -262150, 0, -262149, 0, -262148, 0, -262147, 0, -262146, 0, -262145, 0, -327680, 0, -327679, 0, -327678, 0, -327677, 0, -327676, 0, -327675, 0, -196618, 0, -196617, 0, -196616, 0, -196615, 1, -196614, 1, -196613, 1, -196612, 1, -196611, 1, -196610, 1, -196609, 1, -262144, 0, -262143, 0, -262142, 0, -262141, 0, -262140, 0, -262139, 0, -262138, 0, -131083, 0, -131082, 0, -131081, 0, -131080, 1, -131079, 1, -131078, 1, -131077, 1, -131076, 1, -131075, 1, -131074, 1, -131073, 1, -196608, 1, -196607, 1, -196606, 1, -196605, 0, -196604, 0, -196603, 0, -196602, 0, -65548, 0, -65547, 0, -65546, 0, -65545, 1, -65544, 1, -65543, 1, -65542, 1, -65541, 1, -65540, 1, -65539, 1, -65538, 1, -65537, 1, -131072, 1, -131071, 1, -131070, 1, -131069, 0, -131068, 0, -131067, 0, -131066, 0, -12, 0, -11, 0, -10, 1, -9, 1, -8, 1, -7, 1, -6, 1, -5, 1, -4, 1, -3, 1, -2, 1, -1, 1, -65536, 1, -65535, 0, -65534, 0, -65533, 0, -65532, 0, -65531, 0, -65530, 0, 65523, 0, 65524, 0, 65525, 0, 65526, 1, 65527, 1, 65528, 1, 65529, 1, 65530, 1, 65531, 1, 65532, 1, 65533, 1, 65534, 1, 65535, 1, 0, 0, 1, 0, 2, 0, 3, 0, 4, 0, 5, 0, 6, 0, 131059, 0, 131060, 0, 131061, 0, 131062, 1, 131063, 1, 131064, 1, 131065, 1, 131066, 1, 131067, 1, 131068, 1, 131069, 1, 131070, 1, 131071, 0, 65536, 0, 65537, 0, 65538, 0, 65539, 0, 65540, 0, 65541, 0, 65542, 0, 196595, 0, 196596, 0, 196597, 0, 196598, 1, 196599, 1, 196600, 1, 196601, 1, 196602, 1, 196603, 1, 196604, 1, 196605, 1, 196606, 1, 196607, 0, 131072, 0, 131073, 0, 131074, 0, 131075, 0, 131076, 0, 131077, 0, 131078, 0, 262130, 0, 262131, 0, 262132, 0, 262133, 0, 262134, 0, 262135, 0, 262136, 0, 262137, 0, 262138, 0, 262139, 0, 262140, 0, 262141, 0, 262142, 0, 262143, 0, 196608, 0, 196609, 0, 196610, 0, 196611, 0, 196612, 0, 196613, 0, 327666, 0, 327667, 0, 327668, 0, 327669, 0, 327670, 0, 327671, 0, 327672, 0, 327673, 0, 327674, 0, 327675, 0, 327676, 0, 327677, 0, 327678, 0, 327679, 0, 262144, 0, 262145, 0, 262146, 0, 262147, 0, 262148, 0, 262149, 0, 393202, 0, 393203, 0, 393204, 0, 393205, 0, 393206, 0, 393207, 0, 393208, 0, 393209, 0, 393210, 0, 393211, 0, 393212, 0, 393213, 0, 393214, 0, 393215, 0, 327680, 0, 327681, 0, 327682, 0, 327683, 0, 327684, 0, 327685, 0, 458739, 0, 458740, 0, 458741, 0, 458742, 0, 458743, 0, 458744, 0, 458745, 0, 458746, 0, 458747, 0, 458748, 0, 458749, 0, 458750, 0, 458751, 0, 393216, 0, 393217, 0, 393218, 0, 393219, 0, 393220, 0, 393221, 0 )
+__meta__ = { "_edit_lock_":true }
 
-[node name="player" parent="." instance=ExtResource( 2 )]
+[node name="how_to" type="PanelContainer" parent="."]
 
-transform/pos = Vector2( -288, -96 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -448.0
+margin/top = 0.0
+margin/right = -163.0
+margin/bottom = 56.0
 
-[node name="box" parent="." instance=ExtResource( 3 )]
+[node name="Panel" type="Panel" parent="how_to"]
 
-transform/pos = Vector2( -224, -96 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 7.0
+margin/top = 7.0
+margin/right = 278.0
+margin/bottom = 49.0
 
-[node name="box1" parent="." instance=ExtResource( 3 )]
+[node name="VBoxContainer" type="VBoxContainer" parent="how_to/Panel"]
 
-transform/pos = Vector2( -96, -96 )
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 262.0
+margin/bottom = 40.0
+alignment = 0
 
-[node name="box2" parent="." instance=ExtResource( 3 )]
+[node name="lblTips" type="Label" parent="how_to/Panel/VBoxContainer"]
 
-transform/pos = Vector2( 32, -96 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 262.0
+margin/bottom = 39.0
+custom_fonts/font = ExtResource( 2 )
+text = "Tips :\nHold fire hook + walk backward."
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
 
-[node name="game_menu" parent="." instance=ExtResource( 4 )]
+[node name="player" parent="." instance=ExtResource( 3 )]
 
+transform/pos = Vector2( -608, 160 )
+
+[node name="boxes" type="Node2D" parent="."]
+
+editor/display_folded = true
+__meta__ = { "_edit_lock_":true }
+
+[node name="box" parent="boxes" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( -352, 160 )
+
+[node name="box1" parent="boxes" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 32, -32 )
+
+[node name="box2" parent="boxes" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( -480, 160 )
+
+[node name="game_menu" parent="." instance=ExtResource( 5 )]
+
+visibility/visible = false
 margin/left = -433.0
 margin/top = -175.0
 margin/right = -203.0
