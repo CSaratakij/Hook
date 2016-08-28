@@ -2,7 +2,7 @@
 extends KinematicBody2D
 
 const GRAVITY = 1000.0
-const MOVE_SPEED = 220.0
+const MOVE_SPEED = 180.0
 const JUMP_FORCE = 380.0
 
 var is_facing_right = true
