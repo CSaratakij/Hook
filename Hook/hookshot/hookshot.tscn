@@ -1,17 +1,124 @@
-[gd_scene load_steps=2 format=1]
+[gd_scene load_steps=6 format=1]
 
-[ext_resource path="res://hookshot/hookshot.png" type="Texture" id=1]
+[ext_resource path="res://hookshot/hookshot_handle.png" type="Texture" id=1]
+[ext_resource path="res://hookshot/hookshot.gd" type="Script" id=2]
+[ext_resource path="res://hookshot/hookshot_rope.png" type="Texture" id=3]
+[ext_resource path="res://hookshot/hookshot_arrow.png" type="Texture" id=4]
+
+[sub_resource type="SegmentShape2D" id=1]
+
+custom_solver_bias = 0.0
+a = Vector2( -1.37044, -0.14921 )
+b = Vector2( 0.0021019, 762.153 )
 
 [node name="hookshot" type="Sprite"]
 
+transform/rot = -45.0
 texture = ExtResource( 1 )
+script/script = ExtResource( 2 )
 
-[node name="RayCast2D" type="RayCast2D" parent="."]
+[node name="ropes" type="Node2D" parent="."]
 
-transform/rot = 90.0
-enabled = false
-cast_to = Vector2( 0, 240 )
-layer_mask = 1
-type_mask = 15
+editor/display_folded = true
+__meta__ = { "_edit_group_":true }
+
+[node name="rope" type="Sprite" parent="ropes"]
+
+transform/pos = Vector2( 45.9474, -46.0344 )
+transform/rot = 0.0891474
+transform/scale = Vector2( 1, 1 )
+texture = ExtResource( 3 )
+
+[node name="rope1" type="Sprite" parent="ropes"]
+
+transform/pos = Vector2( 104.012, -104.099 )
+transform/rot = 0.0891474
+transform/scale = Vector2( 1, 1 )
+texture = ExtResource( 3 )
+
+[node name="rope2" type="Sprite" parent="ropes"]
+
+transform/pos = Vector2( 161.952, -162.039 )
+transform/rot = 0.0891474
+transform/scale = Vector2( 1, 1 )
+texture = ExtResource( 3 )
+
+[node name="rope3" type="Sprite" parent="ropes"]
+
+transform/pos = Vector2( 219.97, -220.057 )
+transform/rot = 0.0891474
+transform/scale = Vector2( 1, 1 )
+texture = ExtResource( 3 )
+
+[node name="rope4" type="Sprite" parent="ropes"]
+
+transform/pos = Vector2( 277.967, -278.053 )
+transform/rot = 0.0891474
+transform/scale = Vector2( 1, 1 )
+texture = ExtResource( 3 )
+
+[node name="rope5" type="Sprite" parent="ropes"]
+
+transform/pos = Vector2( 335.948, -336.035 )
+transform/rot = 0.0891474
+transform/scale = Vector2( 1, 1 )
+texture = ExtResource( 3 )
+
+[node name="rope6" type="Sprite" parent="ropes"]
+
+transform/pos = Vector2( 393.931, -394.018 )
+transform/rot = 0.0891474
+transform/scale = Vector2( 1, 1 )
+texture = ExtResource( 3 )
+
+[node name="rope7" type="Sprite" parent="ropes"]
+
+transform/pos = Vector2( 451.948, -452.035 )
+transform/rot = 0.0891474
+transform/scale = Vector2( 1, 1 )
+texture = ExtResource( 3 )
+
+[node name="rope8" type="Sprite" parent="ropes"]
+
+transform/pos = Vector2( 510.381, -510.468 )
+transform/rot = 0.0891474
+transform/scale = Vector2( 1, 1 )
+texture = ExtResource( 3 )
+
+[node name="arrow" type="KinematicBody2D" parent="." groups=[ "hookshot_arrow" ]]
+
+transform/scale = Vector2( 1, 1 )
+input/pickable = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+__meta__ = { "_edit_group_":true }
+
+[node name="Sprite" type="Sprite" parent="arrow"]
+
+transform/scale = Vector2( 1, 1 )
+texture = ExtResource( 4 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( -0.707107, -0.707107, 0.707107, -0.707107, 0, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+
+transform/rot = 135.0
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[connection signal="body_enter" from="Area2D" to="." method="_on_Area2D_body_enter"]
+
+[connection signal="body_exit" from="Area2D" to="." method="_on_Area2D_body_exit"]
 
 
