@@ -27,6 +27,8 @@ func _input(event):
 	if event.is_action_released("hook"):
 		_hide_ropes()
 		arrow.set_pos(Vector2(0.0, 0.0))
+		if fire_state == 1 and release_state == 0:
+			_play_pullback_sound()
 		fire_state = 0
 		release_state = 0
 
@@ -60,7 +62,6 @@ func _fixed_process(delta):
 				arrow.move_to(arrow_target_pos)
 			else:
 				_hide_ropes()
-				_play_pullback_sound()
 				arrow.set_pos(Vector2(0.0, 0.0))
 
 func _show_ropes():
