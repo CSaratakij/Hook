@@ -33,12 +33,12 @@ func _process(delta):
 		move_dir.x = -1.0
 		if not is_using_hook and is_facing_right:
 			is_facing_right = !is_facing_right
-			set_scale(Vector2(-1.0, 1.0))
+			set_scale(Vector2(move_dir.x, 1.0))
 	elif Input.is_action_pressed("move_right"):
 		move_dir.x = 1.0
 		if not is_using_hook and not is_facing_right:
 			is_facing_right = !is_facing_right
-			set_scale(Vector2(1.0, 1.0))
+			set_scale(Vector2(move_dir.x, 1.0))
 	else:
 		move_dir.x = 0.0
 	

@@ -5,7 +5,8 @@ const HOW_TO_PLAY = "res://menu/control_menu.tscn"
 const MAINMENU = "res://menu/mainmenu.tscn"
 const THANK_YOU_FOR_PLAYING = "res://menu/gameover.tscn"
 const LEVELS = [
-	"res://level/level.tscn"
+	"res://level/level.tscn",
+	"res://level/level1.tscn"
 	]
 
 onready var tree = get_tree()
