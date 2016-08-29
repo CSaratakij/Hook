@@ -24,10 +24,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 670.0
-margin/top = 80.0
-margin/right = 969.0
-margin/bottom = 147.0
+margin/left = 630.0
+margin/top = 210.0
+margin/right = 929.0
+margin/bottom = 277.0
 alignment = 0
 
 [node name="lblObjective" type="Label" parent="Objective"]
@@ -57,18 +57,6 @@ margin/left = 0.0
 margin/top = 60.0
 margin/right = 299.0
 margin/bottom = 63.0
-
-[node name="picObjective" type="TextureFrame" parent="."]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 600.0
-margin/top = 160.0
-margin/right = 989.0
-margin/bottom = 340.0
-stretch_mode = 0
 
 [node name="Control" type="VBoxContainer" parent="."]
 
@@ -628,9 +616,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 600.0
-margin/top = 360.0
+margin/top = 300.0
 margin/right = 988.0
-margin/bottom = 409.0
+margin/bottom = 349.0
 custom_fonts/font = ExtResource( 4 )
 text = "[x] Use hookshot to pass the obstacle.\n[x] Find the exit ways."
 percent_visible = 1.0
