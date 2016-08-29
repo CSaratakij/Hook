@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=1]
+[gd_scene load_steps=7 format=1]
 
 [ext_resource path="res://menu/mainmenu.gd" type="Script" id=1]
 [ext_resource path="res://font/font_120px.fnt" type="BitmapFont" id=2]
 [ext_resource path="res://font/font_16px.fnt" type="BitmapFont" id=3]
 [ext_resource path="res://font/font_50px.fnt" type="BitmapFont" id=4]
 [ext_resource path="res://font/font_20px.fnt" type="BitmapFont" id=5]
+[ext_resource path="res://sound/sfx_sample.tres" type="SampleLibrary" id=6]
 
 [node name="mainmenu" type="Panel"]
 
@@ -179,8 +180,34 @@ shortcut = null
 text = "How to play"
 flat = true
 
+[node name="SamplePlayer" type="SamplePlayer" parent="."]
+
+config/polyphony = 1
+config/samples = ExtResource( 6 )
+default/volume_db = 0.0
+default/pitch_scale = 1.0
+default/pan = 0.0
+default/depth = 0.0
+default/height = 0.0
+default/filter/type = 0
+default/filter/cutoff = 5000.0
+default/filter/resonance = 1.0
+default/filter/gain = 1.0
+default/reverb_room = 2
+default/reverb_send = 0.0
+default/chorus_send = 0.0
+
+[node name="Timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 1.2
+one_shot = true
+autostart = false
+
 [connection signal="pressed" from="Buttons/btnPlay" to="." method="_on_btnPlay_pressed"]
 
 [connection signal="pressed" from="HowTo/btnHowTo" to="." method="_on_btnHowTo_pressed"]
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 
 
