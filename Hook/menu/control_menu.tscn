@@ -113,7 +113,6 @@ margin/bottom = 41.0
 
 [node name="tabControl" type="TabContainer" parent="."]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -127,16 +126,258 @@ tabs_visible = true
 
 [node name="Keyboard" type="Tabs" parent="tabControl"]
 
+editor/display_folded = true
 anchor/right = 1
 anchor/bottom = 1
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
+margin/left = 4.0
+margin/top = 32.0
+margin/right = 4.0
+margin/bottom = 4.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="tabControl/Keyboard"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 40.0
-margin/right = 8.0
-margin/bottom = -25.0
+margin/top = 0.0
+margin/right = 286.0
+margin/bottom = 208.0
+scroll/horizontal = true
+scroll/vertical = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="tabControl/Keyboard/ScrollContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 146.0
+margin/bottom = 68.0
+alignment = 0
+
+[node name="Fire Hook" type="HBoxContainer" parent="tabControl/Keyboard/ScrollContainer/VBoxContainer"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 146.0
+margin/bottom = 14.0
+alignment = 0
+
+[node name="lblFireHook" type="Label" parent="tabControl/Keyboard/ScrollContainer/VBoxContainer/Fire Hook"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 59.0
+margin/bottom = 14.0
+text = "Fire hook"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="VSeparator" type="VSeparator" parent="tabControl/Keyboard/ScrollContainer/VBoxContainer/Fire Hook"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 63.0
+margin/top = 0.0
+margin/right = 66.0
+margin/bottom = 14.0
+
+[node name="lblFireHook 1" type="Label" parent="tabControl/Keyboard/ScrollContainer/VBoxContainer/Fire Hook"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 70.0
+margin/top = 0.0
+margin/right = 103.0
+margin/bottom = 14.0
+text = "x key"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Jump" type="HBoxContainer" parent="tabControl/Keyboard/ScrollContainer/VBoxContainer"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 18.0
+margin/right = 146.0
+margin/bottom = 32.0
+alignment = 0
+
+[node name="lblJump" type="Label" parent="tabControl/Keyboard/ScrollContainer/VBoxContainer/Jump"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 32.0
+margin/bottom = 14.0
+text = "Jump"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="VSeparator" type="VSeparator" parent="tabControl/Keyboard/ScrollContainer/VBoxContainer/Jump"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 36.0
+margin/top = 0.0
+margin/right = 39.0
+margin/bottom = 14.0
+
+[node name="lblJump 1" type="Label" parent="tabControl/Keyboard/ScrollContainer/VBoxContainer/Jump"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 43.0
+margin/top = 0.0
+margin/right = 100.0
+margin/bottom = 14.0
+text = "spacebar"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Walk Left" type="HBoxContainer" parent="tabControl/Keyboard/ScrollContainer/VBoxContainer"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 36.0
+margin/right = 146.0
+margin/bottom = 50.0
+alignment = 0
+
+[node name="lblLeft" type="Label" parent="tabControl/Keyboard/ScrollContainer/VBoxContainer/Walk Left"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 59.0
+margin/bottom = 14.0
+text = "Walk Left"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="VSeparator" type="VSeparator" parent="tabControl/Keyboard/ScrollContainer/VBoxContainer/Walk Left"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 63.0
+margin/top = 0.0
+margin/right = 66.0
+margin/bottom = 14.0
+
+[node name="lblLeft1" type="Label" parent="tabControl/Keyboard/ScrollContainer/VBoxContainer/Walk Left"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 70.0
+margin/top = 0.0
+margin/right = 130.0
+margin/bottom = 14.0
+text = "arrow left"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Walk Right" type="HBoxContainer" parent="tabControl/Keyboard/ScrollContainer/VBoxContainer"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 54.0
+margin/right = 146.0
+margin/bottom = 68.0
+alignment = 0
+
+[node name="lblRight" type="Label" parent="tabControl/Keyboard/ScrollContainer/VBoxContainer/Walk Right"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 67.0
+margin/bottom = 14.0
+text = "Walk Right"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="VSeparator" type="VSeparator" parent="tabControl/Keyboard/ScrollContainer/VBoxContainer/Walk Right"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 71.0
+margin/top = 0.0
+margin/right = 74.0
+margin/bottom = 14.0
+
+[node name="lblRight 1" type="Label" parent="tabControl/Keyboard/ScrollContainer/VBoxContainer/Walk Right"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 78.0
+margin/top = 0.0
+margin/right = 146.0
+margin/bottom = 14.0
+text = "arrow right"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
 
 [node name="Joystick" type="Tabs" parent="tabControl"]
 
@@ -151,6 +392,234 @@ margin/left = 4.0
 margin/top = 32.0
 margin/right = 4.0
 margin/bottom = 4.0
+
+[node name="VBoxContainer1" type="VBoxContainer" parent="tabControl/Joystick"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 146.0
+margin/bottom = 68.0
+alignment = 0
+
+[node name="Fire Hook" type="HBoxContainer" parent="tabControl/Joystick/VBoxContainer1"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 240.0
+margin/bottom = 14.0
+alignment = 0
+
+[node name="lblFireHook" type="Label" parent="tabControl/Joystick/VBoxContainer1/Fire Hook"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 59.0
+margin/bottom = 14.0
+text = "Fire hook"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="VSeparator" type="VSeparator" parent="tabControl/Joystick/VBoxContainer1/Fire Hook"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 63.0
+margin/top = 0.0
+margin/right = 66.0
+margin/bottom = 14.0
+
+[node name="lblFireHook 1" type="Label" parent="tabControl/Joystick/VBoxContainer1/Fire Hook"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 70.0
+margin/top = 0.0
+margin/right = 132.0
+margin/bottom = 14.0
+text = "(X) button"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Jump" type="HBoxContainer" parent="tabControl/Joystick/VBoxContainer1"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 18.0
+margin/right = 240.0
+margin/bottom = 32.0
+alignment = 0
+
+[node name="lblJump" type="Label" parent="tabControl/Joystick/VBoxContainer1/Jump"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 32.0
+margin/bottom = 14.0
+text = "Jump"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="VSeparator" type="VSeparator" parent="tabControl/Joystick/VBoxContainer1/Jump"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 36.0
+margin/top = 0.0
+margin/right = 39.0
+margin/bottom = 14.0
+
+[node name="lblJump 1" type="Label" parent="tabControl/Joystick/VBoxContainer1/Jump"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 43.0
+margin/top = 0.0
+margin/right = 106.0
+margin/bottom = 14.0
+text = "(A) button"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Walk Left" type="HBoxContainer" parent="tabControl/Joystick/VBoxContainer1"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 36.0
+margin/right = 240.0
+margin/bottom = 50.0
+alignment = 0
+
+[node name="lblLeft" type="Label" parent="tabControl/Joystick/VBoxContainer1/Walk Left"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 59.0
+margin/bottom = 14.0
+text = "Walk Left"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="VSeparator" type="VSeparator" parent="tabControl/Joystick/VBoxContainer1/Walk Left"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 63.0
+margin/top = 0.0
+margin/right = 66.0
+margin/bottom = 14.0
+
+[node name="lblLeft1" type="Label" parent="tabControl/Joystick/VBoxContainer1/Walk Left"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 70.0
+margin/top = 0.0
+margin/right = 156.0
+margin/bottom = 14.0
+text = "(<-) DPad Left"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Walk Right" type="HBoxContainer" parent="tabControl/Joystick/VBoxContainer1"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 54.0
+margin/right = 240.0
+margin/bottom = 68.0
+alignment = 0
+
+[node name="lblRight" type="Label" parent="tabControl/Joystick/VBoxContainer1/Walk Right"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 67.0
+margin/bottom = 14.0
+text = "Walk Right"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="VSeparator" type="VSeparator" parent="tabControl/Joystick/VBoxContainer1/Walk Right"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 71.0
+margin/top = 0.0
+margin/right = 74.0
+margin/bottom = 14.0
+
+[node name="lblRight 1" type="Label" parent="tabControl/Joystick/VBoxContainer1/Walk Right"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 78.0
+margin/top = 0.0
+margin/right = 172.0
+margin/bottom = 14.0
+text = "(->) DPad Right"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
 
 [node name="lblObjective" type="Label" parent="."]
 
