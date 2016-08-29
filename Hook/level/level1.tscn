@@ -205,14 +205,6 @@ transform/pos = Vector2( -736, -736 )
 
 transform/pos = Vector2( -480, -32 )
 
-[node name="box4" parent="boxes" instance=ExtResource( 5 )]
-
-transform/pos = Vector2( 160, -480 )
-
-[node name="box5" parent="boxes" instance=ExtResource( 5 )]
-
-transform/pos = Vector2( 160, -416 )
-
 [node name="box6" parent="boxes" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 160, -352 )
@@ -221,6 +213,18 @@ transform/pos = Vector2( 160, -352 )
 
 transform/pos = Vector2( 160, -288 )
 
+[node name="box10" parent="boxes" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 96, -288 )
+
+[node name="box20" parent="boxes" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 96, -352 )
+
+[node name="box24" parent="boxes" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 96, -416 )
+
 [node name="box8" parent="boxes" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 224, -352 )
@@ -228,10 +232,6 @@ transform/pos = Vector2( 224, -352 )
 [node name="box9" parent="boxes" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 224, -288 )
-
-[node name="box10" parent="boxes" instance=ExtResource( 5 )]
-
-transform/pos = Vector2( 224, -416 )
 
 [node name="box11" parent="boxes" instance=ExtResource( 5 )]
 
@@ -276,10 +276,6 @@ transform/pos = Vector2( 736, 32 )
 [node name="box21" parent="boxes" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 736, 96 )
-
-[node name="box20" parent="boxes" instance=ExtResource( 5 )]
-
-transform/pos = Vector2( 736, -32 )
 
 [node name="box15" parent="boxes" instance=ExtResource( 5 )]
 

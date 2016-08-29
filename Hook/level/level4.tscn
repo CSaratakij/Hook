@@ -1,0 +1,199 @@
+[gd_scene load_steps=7 format=1]
+
+[ext_resource path="res://tilemap/tileset_level.tres" type="TileSet" id=1]
+[ext_resource path="res://exit_door/exit_door.tscn" type="PackedScene" id=2]
+[ext_resource path="res://coin/coin.tscn" type="PackedScene" id=3]
+[ext_resource path="res://player/player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://box/box.tscn" type="PackedScene" id=5]
+[ext_resource path="res://menu/game_menu.tscn" type="PackedScene" id=6]
+
+[node name="level" type="Node2D"]
+
+__meta__ = { "_edit_lock_":true }
+
+[node name="TileMap" type="TileMap" parent="."]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell/size = Vector2( 64, 64 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 0.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray( -1179662, 536870912, -1179661, 536870912, -1179660, 536870912, -1179659, 536870912, -1179658, 536870912, -1179657, 536870912, -1179656, 536870912, -1179655, 536870912, -1114131, 536870912, -1114130, 536870912, -1114129, 536870912, -1114128, 536870912, -1114127, 536870912, -1114126, 536870912, -1114125, 536870912, -1114124, 536870912, -1114123, 536870912, -1114122, 536870912, -1114121, 536870912, -1114120, 536870912, -1114119, 536870912, -1114118, 536870912, -1114117, 536870912, -1114116, 536870912, -1048598, 536870912, -1048597, 536870912, -1048596, 536870912, -1048595, 536870912, -1048594, 536870912, -1048593, 536870912, -1048592, 536870912, -1048591, 536870912, -1048590, 536870912, -1048589, 536870912, -1048588, 536870912, -1048587, 536870912, -1048586, 536870912, -1048585, 536870912, -1048584, 536870912, -1048583, 536870912, -1048582, 536870912, -1048581, 536870912, -1048580, 536870912, -1048579, 536870912, -983063, 536870912, -983062, 536870912, -983061, 536870913, -983060, 536870913, -983059, 536870913, -983058, 536870913, -983057, 536870913, -983056, 536870912, -983055, 536870912, -983054, 536870912, -983053, 536870912, -983052, 536870912, -983051, 536870912, -983050, 536870912, -983049, 536870912, -983048, 536870912, -983047, 536870912, -983046, 536870912, -983045, 536870912, -983044, 536870912, -983043, 536870912, -917527, 536870912, -917526, 536870912, -917525, 536870913, -917524, 536870913, -917523, 536870913, -917522, 536870913, -917521, 536870913, -917520, 536870912, -917519, 536870912, -917518, 536870912, -917517, 536870912, -917516, 536870913, -917515, 536870913, -917514, 536870913, -917513, 536870912, -917512, 536870912, -917511, 536870912, -917510, 536870912, -917509, 536870912, -917508, 536870912, -917507, 536870912, -917506, 536870912, -851991, 536870912, -851990, 536870912, -851989, 536870913, -851988, 536870913, -851987, 536870913, -851986, 536870913, -851985, 536870913, -851984, 536870912, -851983, 536870912, -851982, 536870912, -851981, 536870913, -851980, 536870913, -851979, 536870913, -851978, 536870913, -851977, 536870913, -851976, 536870913, -851975, 536870913, -851974, 536870913, -851973, 536870912, -851972, 536870912, -851971, 536870912, -851970, 536870912, -786455, 536870912, -786454, 536870912, -786453, 536870913, -786452, 536870913, -786451, 536870913, -786450, 536870913, -786449, 536870913, -786448, 536870913, -786447, 536870913, -786446, 536870913, -786445, 536870913, -786444, 536870913, -786443, 536870913, -786442, 536870913, -786441, 536870913, -786440, 536870913, -786439, 536870913, -786438, 536870913, -786437, 536870912, -786436, 536870912, -786435, 536870912, -786434, 536870912, -720919, 536870912, -720918, 536870912, -720917, 536870913, -720916, 536870913, -720915, 536870913, -720914, 536870913, -720913, 536870913, -720912, 536870913, -720911, 536870913, -720910, 536870913, -720909, 536870913, -720908, 536870913, -720907, 536870913, -720906, 536870913, -720905, 536870913, -720904, 536870913, -720903, 536870913, -720902, 536870913, -720901, 536870913, -720900, 536870912, -720899, 536870912, -720898, 536870912, -655383, 536870912, -655382, 536870912, -655381, 536870912, -655380, 536870912, -655379, 536870912, -655378, 536870912, -655377, 536870912, -655376, 536870912, -655375, 536870912, -655374, 536870912, -655373, 536870912, -655372, 536870912, -655371, 536870913, -655370, 536870913, -655369, 536870913, -655368, 536870913, -655367, 536870913, -655366, 536870913, -655365, 536870912, -655364, 536870912, -655363, 536870912, -655362, 536870912, -589846, 536870912, -589845, 536870912, -589844, 536870912, -589843, 536870912, -589842, 536870912, -589841, 536870912, -589840, 536870912, -589839, 536870912, -589838, 536870912, -589837, 536870912, -589836, 536870912, -589835, 536870912, -589834, 536870913, -589833, 536870913, -589832, 536870913, -589831, 536870913, -589830, 536870913, -589829, 536870912, -589828, 536870912, -589827, 536870912, -589826, 536870912, -524308, 536870912, -524307, 536870912, -524306, 536870912, -524305, 536870912, -524304, 536870912, -524303, 536870912, -524299, 536870912, -524298, 536870912, -524297, 536870913, -524296, 536870913, -524295, 536870913, -524294, 536870913, -524293, 536870912, -524292, 536870912, -524291, 536870912, -524290, 536870912, -458763, 536870912, -458762, 536870912, -458761, 536870912, -458760, 536870913, -458759, 536870913, -458758, 536870912, -458757, 536870912, -458756, 536870912, -458755, 536870912, -393226, 536870912, -393225, 536870912, -393224, 536870912, -393223, 536870912, -393222, 536870912, -393221, 536870912, -393220, 536870912, -393219, 536870912, -327688, 536870912, -327687, 536870912, -327686, 536870912, -327685, 536870912, -327684, 536870912, -327683, 536870912 )
+__meta__ = { "_edit_lock_":true }
+
+[node name="exit_door" parent="." instance=ExtResource( 2 )]
+
+transform/pos = Vector2( -288, -736 )
+current_level_id = 4
+
+[node name="coins" type="Node2D" parent="."]
+
+editor/display_folded = true
+
+[node name="coin" parent="coins" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( -672, -672 )
+
+[node name="coin9" parent="coins" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( -1248, -800 )
+
+[node name="coin10" parent="coins" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( -1312, -736 )
+
+[node name="coin11" parent="coins" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( -1248, -736 )
+
+[node name="coin12" parent="coins" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( -1184, -800 )
+
+[node name="coin13" parent="coins" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( -1184, -736 )
+
+[node name="coin14" parent="coins" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( -1120, -736 )
+
+[node name="coin17" parent="coins" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( -1312, -800 )
+
+[node name="coin18" parent="coins" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( -1248, -864 )
+
+[node name="coin20" parent="coins" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( -1312, -928 )
+
+[node name="coin19" parent="coins" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( -1312, -864 )
+
+[node name="coin1" parent="coins" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( -608, -608 )
+
+[node name="coin2" parent="coins" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( -544, -544 )
+
+[node name="coin3" parent="coins" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( -480, -480 )
+
+[node name="player" parent="." instance=ExtResource( 4 )]
+
+transform/pos = Vector2( -864, -736 )
+
+[node name="boxes" type="Node2D" parent="."]
+
+editor/display_folded = true
+__meta__ = { "_edit_lock_":true }
+
+[node name="box" parent="boxes" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -352, 160 )
+
+[node name="box1" parent="boxes" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 32, -32 )
+
+[node name="box2" parent="boxes" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -480, 160 )
+
+[node name="box3" parent="boxes" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -992, -736 )
+
+[node name="box20" parent="boxes" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -416, -480 )
+
+[node name="box4" parent="boxes" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -1056, -864 )
+
+[node name="box6" parent="boxes" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -1056, -800 )
+
+[node name="box18" parent="boxes" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -1056, -736 )
+
+[node name="box19" parent="boxes" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -1120, -736 )
+
+[node name="box5" parent="boxes" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -608, -608 )
+
+[node name="box7" parent="boxes" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -1312, -992 )
+
+[node name="box8" parent="boxes" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -1312, -864 )
+
+[node name="box9" parent="boxes" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -1312, -800 )
+
+[node name="box10" parent="boxes" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -1312, -736 )
+
+[node name="box11" parent="boxes" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -1248, -992 )
+
+[node name="box12" parent="boxes" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -1120, -992 )
+
+[node name="box13" parent="boxes" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -1248, -800 )
+
+[node name="box14" parent="boxes" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -1248, -736 )
+
+[node name="box15" parent="boxes" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -1184, -992 )
+
+[node name="box16" parent="boxes" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -1184, -800 )
+
+[node name="box17" parent="boxes" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( -1184, -736 )
+
+[node name="game_menu" parent="." instance=ExtResource( 6 )]
+
+visibility/visible = false
+margin/left = -433.0
+margin/top = -175.0
+margin/right = -203.0
+margin/bottom = -25.0
+
+
