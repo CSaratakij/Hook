@@ -8,18 +8,7 @@ const LEVELS = [
 	"res://level/level.tscn"
 	]
 
-var is_over = false
-
 onready var tree = get_tree()
-
-func game_start():
-	is_over = false
-
-func game_over():
-	is_over = true
-
-func is_game_over():
-	return is_over
 
 func change_to_how_to_play():
 	tree.change_scene(HOW_TO_PLAY)
