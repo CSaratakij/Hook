@@ -9,10 +9,10 @@
 
 [resource]
 
-samples/fire_hook = { "db":0.0, "pitch":1.0, "sample":ExtResource( 1 ) }
-samples/jump = { "db":0.0, "pitch":1.0, "sample":ExtResource( 2 ) }
+samples/fire_hook = { "db":-10.0, "pitch":1.0, "sample":ExtResource( 1 ) }
+samples/jump = { "db":-10.0, "pitch":1.0, "sample":ExtResource( 2 ) }
 samples/next_level = { "db":0.0, "pitch":1.0, "sample":ExtResource( 3 ) }
-samples/pickup_coin = { "db":0.0, "pitch":1.0, "sample":ExtResource( 4 ) }
-samples/pullback_hook = { "db":0.0, "pitch":1.0, "sample":ExtResource( 5 ) }
-samples/select = { "db":0.0, "pitch":1.0, "sample":ExtResource( 6 ) }
+samples/pickup_coin = { "db":-10.0, "pitch":1.0, "sample":ExtResource( 4 ) }
+samples/pullback_hook = { "db":-10.0, "pitch":1.0, "sample":ExtResource( 5 ) }
+samples/select = { "db":-20.0, "pitch":1.0, "sample":ExtResource( 6 ) }
 

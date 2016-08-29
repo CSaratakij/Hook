@@ -14,6 +14,7 @@ var motion = Vector2()
 var velocity = Vector2()
 var move_dir = Vector2()
 
+onready var _audio_player = get_node("SamplePlayer")
 onready var _raycast = get_node("RayCast2D")
 
 func _ready():
@@ -59,6 +60,7 @@ func _fixed_process(delta):
 	
 	if is_grounded and Input.is_action_pressed("jump"):
 		velocity.y = -JUMP_FORCE
+		_audio_player.play("jump")
 	
 	motion = velocity * delta
 	move(motion)
