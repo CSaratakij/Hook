@@ -1,0 +1,16 @@
+[gd_resource type="SampleLibrary" load_steps=6 format=1]
+
+[ext_resource path="res://sound/Laser2.wav" type="Sample" id=1]
+[ext_resource path="res://sound/Jump.wav" type="Sample" id=2]
+[ext_resource path="res://sound/Powerup.wav" type="Sample" id=3]
+[ext_resource path="res://sound/Pickup_Coin.wav" type="Sample" id=4]
+[ext_resource path="res://sound/Blip_Select.wav" type="Sample" id=5]
+
+[resource]
+
+samples/fire_hook = { "db":0.0, "pitch":1.0, "sample":ExtResource( 1 ) }
+samples/jump = { "db":0.0, "pitch":1.0, "sample":ExtResource( 2 ) }
+samples/next_level = { "db":0.0, "pitch":1.0, "sample":ExtResource( 3 ) }
+samples/pickup_coin = { "db":0.0, "pitch":1.0, "sample":ExtResource( 4 ) }
+samples/select = { "db":0.0, "pitch":1.0, "sample":ExtResource( 5 ) }
+
